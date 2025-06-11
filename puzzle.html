@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quebra-Cabeça do Amor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="puzzle.style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button onclick="window.location.href='index.html'">⬅ Voltar</button>
+  </div>
+  <h1>Quebra-Cabeça do Amor 💘</h1>
+
+  <div class="difficulty">
+    <button onclick="setDifficulty('facil')">Fácil</button>
+    <button onclick="setDifficulty('medio')">Médio</button>
+    <button onclick="setDifficulty('dificil')">Difícil</button>
+  </div>
+
+  <div id="content">
+    <div id="gameScreen"></div>
+    <div id="win" class="hidden">
+      <div class="win-message">
+        IHUUUUUUUU VC É 10 DEMAIS VC CONSEGUIU ! 🎉
+        <button onclick="restartGame()">MONTAR DE NOVO</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="puzzle.js"></script>
+</body>
+</html>

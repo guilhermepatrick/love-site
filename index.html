@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nossa História de Amor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Nossa História de Amor</h1> 
+  <div class="section-box timeline">
+    <h2>Guilherme e Ana Luiza</h2>
+    <div class="timeline-item">💘 Pedido de Namoro - 17 de Outubro de 2016</div>
+  </div>
+   <div class="love-clock">
+  <h2>💘 Estamos juntos há:</h2>
+  <div id="daysTogether" class="clock-display">Carregando...</div>
+</div>
+  <div class="section-box gallery">
+    <h2>Nossas Memórias</h2>
+    <div class="slider-wrapper">
+      <button class="nav prev" onclick="changeSlide(-1)">&#10094;</button>
+      <div class="slider">
+        <div id="slideContainer"></div>
+      </div>
+      <button class="nav next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <div class="caption" id="caption"></div>
+  </div>
+
+  <div class="section-box message">
+    <h2>Clique aqui para jogar</h2>
+    <button onclick="window.location.href='puzzle.html'">JOGAR</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
