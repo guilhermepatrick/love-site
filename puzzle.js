@@ -1,26 +1,26 @@
-
 const gameScreen = document.getElementById("gameScreen");
 const winOverlay = document.getElementById("win");
 
-let contentWidth = 1059;
-let contentHeight = 480;
+// Nova proporção da imagem: 1080x1920 (9:16)
+let contentWidth = 360; // base larga suficiente para celular
+let contentHeight = 640; // proporcional a 9:16
 
-let cols = 12;
-let rows = Math.round(cols / (1278 / 579));
+let cols = 10;
+let rows = Math.round((cols * contentHeight) / contentWidth);
 
 let tileWidth = contentWidth / cols;
 let tileHeight = contentHeight / rows;
-let totalTiles = cols * rows;
+let totalTiles = (cols * rows);
 
 let tiles = [];
 let selected = [];
 
 function setDifficulty(level) {
-  if (level === "facil") cols = 6;
-  else if (level === "medio") cols = 9;
-  else cols = 12;
+  if (level === "facil") cols = 3;
+  else if (level === "medio") cols = 4;
+  else cols = 6;
 
-  rows = Math.round(cols / (1278 / 579));
+  rows = Math.round((cols * contentHeight) / contentWidth);
   tileWidth = contentWidth / cols;
   tileHeight = contentHeight / rows;
   totalTiles = cols * rows;
@@ -131,4 +131,9 @@ function launchConfetti() {
   document.body.appendChild(script);
 }
 
-setDifficulty("dificil");
+// Inicializa com o nível difícil por padrão
+setDifficulty("facil");
+
+function closeWin() {
+  winOverlay.classList.remove("show");
+}
