@@ -98,8 +98,7 @@ function checkWin() {
   );
   if (allCorrect) {
     setTimeout(() => {
-      winOverlay.classList.add("show");
-      launchConfetti();
+      winOverlay.classList.add("show");     
     }, 300);
   }
 }
