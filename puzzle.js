@@ -116,21 +116,6 @@ function shuffle(array) {
   }
 }
 
-function launchConfetti() {
-  const script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js";
-  script.onload = () => {
-    const duration = 2000;
-    const end = Date.now() + duration;
-    (function frame() {
-      confetti({ particleCount: 6, angle: 60, spread: 55, origin: { x: 0 } });
-      confetti({ particleCount: 6, angle: 120, spread: 55, origin: { x: 1 } });
-      if (Date.now() < end) requestAnimationFrame(frame);
-    })();
-  };
-  document.body.appendChild(script);
-}
-
 // Inicializa com o nível difícil por padrão
 setDifficulty("facil");
 
